@@ -1,0 +1,147 @@
+{% extends 'hello/base.html' %}
+{% block title %}contactus{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>contact us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+</head>
+<body>
+    <div class="card">
+      <div class="card__header">
+        <img src="https://getmyuni.azureedge.net/college-image/big/institute-of-aeronautical-engineering-iare-hyderabad.jpg" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-brown">college</span>
+        <h4><strong>TO CONTACT PRINICIPAL:</h4>
+        <p>PHONE NO : 040-675675</p>
+        <p>EMAIL : principal@iare.ac.in</p>
+      </div>
+      <div class="card__footer">
+        <div class="user">
+          <img src="data:image/png;base64,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" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" alt="user__image" class="user__image">
+          <div class="user__info">
+            <h5><strong>PAT OFFICER</h5>
+            <small><strong>PHONE NO : 9999960909</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #7f7fd5;
+  background:linear-gradient(to right, #f8f9fa, #dee2e6, #dee2e6)
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
+}
+</style>
+</html>
+
+{% endblock body %}
