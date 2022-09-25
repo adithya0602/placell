@@ -63,6 +63,19 @@ def recruiter_login(request):
             messages.error(request,"invalid credentials")
             return redirect("recruiter_login")
     return render(request,"hello/recruiter.html")
+def student_login(request):
+    if request.method=="POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        user=authenticate(username=username,password=password)
+        if user is not None and user.is_student:
+            login(request,user)
+            messages.info(request,"successfully logged in")
+            return render(request,"hello/main.html")
+        else:
+            messages.error(request,"invalid credentials")
+            return redirect("student_login")
+    return render(request,"hello/student_login.html")
 def contact(request):
     return render(request,"hello/contact.html")
 def placed(request):
