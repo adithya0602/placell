@@ -7,15 +7,6 @@ class User(AbstractUser):
     is_recruiter=models.BooleanField('Is recruiter',default=False)
     is_student=models.BooleanField('Is student',default=False)
 
-class StudentP(models.Model):
-    rollno=models.CharField( max_length=50)
-    name=models.CharField(max_length=20)
-    email=models.EmailField(max_length=30)
-    branch=models.CharField(max_length=40)
-    cgpa=models.IntegerField()
-    image=models.ImageField()
-    def __str__(self):
-        return self.name
 class Recruiter(models.Model):
     username=models.CharField(max_length=20)
     fname=models.CharField(max_length=20)
@@ -35,3 +26,13 @@ class Student(models.Model):
     pass1=models.CharField(max_length=20)
     def __str__(self):
         return self.sname
+class Profile(models.Model):
+    pname=models.CharField(max_length=30)
+    mobile=models.CharField(max_length=10)
+    add=models.CharField(max_length=30)
+    email=models.EmailField(max_length=30)
+    edu=models.CharField(max_length=50)
+    det=models.CharField(max_length=50)
+    image=models.ImageField(upload_to="pics",default="default.svg")
+    def __str__(self):
+        return self.pname

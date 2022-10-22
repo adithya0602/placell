@@ -9,7 +9,6 @@ urlpatterns = [
     path("main",views.main,name="main"),
     path("main1",views.main1,name="main1"),
     path("student_login",views.student_login,name="student_login"),
-    path("student_profile",views.student_profile,name="student_profile"),
     path("recruiter_login",views.recruiter_login,name="recruiter_login"),
     path("contact",views.contact,name="contact"),
     path("contactus",views.contactus,name="contactus"),

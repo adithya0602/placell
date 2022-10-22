@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.db import models
 from django.shortcuts import render,redirect
-from hello.models import Recruiter, Student,StudentP
+from hello.models import Recruiter, Student,Profile
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
 User=get_user_model()
@@ -9,24 +9,22 @@ User=get_user_model()
 from django.contrib.auth import authenticate, login
 def main(request):
     return render(request,"hello/main.html")
-def student_profile(request):
+def profilestud(request):
     if request.method=="POST":
-        rollno=request.POST.get('rollno')
-        name=request.POST.get('name')
+        pname=request.POST.get('pname')
+        mobile=request.POST.get('mobile')
+        add=request.POST.get('add')
         email=request.POST.get('email')
-        branch=request.POST.get('branch')
-        cgpa=request.POST.get('cgpa')
-        if len(request.FILES)!=0:
-            image=request.FILES['image']
-        myuser=StudentP(rollno=rollno,name=name,email=email,branch=branch,cgpa=cgpa)
+        edu=request.POST.get('edu')
+        det=request.POST.get('det')
+        image=request.POST.get('image')
+        myuser=Profile(pname=pname,mobile=mobile,add=add,email=email,edu=edu,det=det,image=image)
         myuser.save()
-        en=User.objects.create_user(username=name,email=email)
-        en.first_name=rollno
-        en.last_name=name
+        en=User.objects.create_user(username=pname,email=email)
         en.save()
         messages.success(request,"successfully registered....")
-        return redirect('student_profile')
-    return render(request,"hello/student_profile.html")
+        return redirect('profilestud')
+    return render(request,"hello/profilestud.html")
 def contactus(request):
     return render(request,"hello/contactus.html")
 def main1(request):
@@ -39,19 +37,6 @@ def companies_visited(request):
     return render(request,"hello/company.html")
 def profilestud(request):
     return render(request,"hello/profilestud.html")
-def student_login(request):
-    if request.method=="POST":
-        sname=request.POST.get('sname')
-        pass1=request.POST.get('pass1')
-        user=authenticate(username=sname,password=pass1)
-        if user is not None and user.is_student:
-            login(request,user)
-            messages.success(request,"successfully logged in")
-            return render(request,"hello/main.html")
-        else:
-            messages.error(request,"invalid credentials")
-            return redirect("student_login")
-    return render(request,"hello/student_login.html")
 def recruiter_login(request):
     if request.method=="POST":
         username=request.POST.get('username')
