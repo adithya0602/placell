@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import  settings
+from django.conf.urls.static import static
 
 admin.site.site_header="placement admin"
 admin.site.site_title="placement portal"
@@ -24,3 +26,4 @@ urlpatterns = [
     path('',include('hello.urls')),
     
 ]
+urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

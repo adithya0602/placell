@@ -37,6 +37,8 @@ def about(request):
     return render(request,"hello/about.html")
 def companies_visited(request):
     return render(request,"hello/company.html")
+def profilestud(request):
+    return render(request,"hello/profilestud.html")
 def student_login(request):
     if request.method=="POST":
         sname=request.POST.get('sname')
