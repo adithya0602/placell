@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-STATIC_ROOT=os.path.join(BASE_DIR,'assets')
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 MEDIA_URL='/media/'
 
 # Default primary key field type
@@ -129,6 +129,6 @@ MEDIA_URL='/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #added manually
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "first\static")
+    os.path.join(BASE_DIR, "\static")
 ]
 AUTH_USER_MODEL='hello.User'
