@@ -18,8 +18,8 @@ class StudentFilter(admin.ModelAdmin):
 admin.site.register(Student,StudentFilter)
 
 class ProfileFilter(admin.ModelAdmin):
-    list_display=['pname','mobile','add','email']
+    list_display=['pname','mobile','add','email','image']
     list_display_links=['add']
-    list_editable=['pname','mobile','email']
+    list_editable=['pname','mobile','email','image']
     list_filter=['pname','email']
 admin.site.register(Profile,ProfileFilter)
