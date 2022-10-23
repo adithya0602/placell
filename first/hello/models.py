@@ -35,4 +35,4 @@ class Profile(models.Model):
     det=models.CharField(max_length=50)
     image=models.ImageField(upload_to="pics",default="default.svg")
     def __str__(self):
-        return self.pname
+        return f'{self.user} Profile'
