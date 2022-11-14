@@ -1,5 +1,72 @@
 {% extends 'hello/base.html' %}
 {% block title %}placed{% endblock title %}
 {% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin:100px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>PLACEMENTS</h2>
+
+<table >
+  <tr>
+    <th>STUDENT NAME</th>
+    <th>COMPANY</th>
+    <th>PACKAGE</th>
+  </tr>
+  <tr>
+    <td>RAHUL</td>
+    <td>MICROSOFT</td>
+    <td>30 LACS</td>
+  </tr>
+  <tr>
+    <td>SHIVA</td>
+    <td>GOOGLE</td>
+    <td>20 LAC</td>
+  </tr>
+  <tr>
+    <td>RAJU</td>
+    <td>IBM</td>
+    <td>29 LACS</td>
+  </tr>
+  <tr>
+    <td>ASHRITH</td>
+    <td>AMAZON</td>
+    <td>29 LACS</td>
+  </tr>
+  <tr>
+    <td>AJAY</td>
+    <td>INFOSYS</td>
+    <td>15 LACS</td>
+  </tr>
+  <tr>
+    <td>MAHESH</td>
+    <td>TCS</td>
+    <td>10 LACS</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
 
 {%endblock body%}
