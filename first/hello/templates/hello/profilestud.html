@@ -13,6 +13,8 @@
         <div class="row">
             <div class="user-profile-image-box">
                 <form class="user-profile-image-box"     action="#">
+                    <br>
+                    <br>
                     <label for="myfile">Select a Image file:</label>
                     <input type="file" id="image" name="image"><br><br>
                     <img src="{{image.url}}" alt="">
@@ -48,7 +50,11 @@
 </body>
 <style>
     body {
-        background: rgb(99, 39, 120)
+        background-color:white;
+    }
+    .row{
+        background-color:skyblue;
+        border-radius:30px;
     }
     
     .form-control:focus {
@@ -57,7 +63,7 @@
     }
     
     .profile-button {
-        background: rgb(99, 39, 120);
+        background: blue;
         box-shadow: none;
         border: none
     }
