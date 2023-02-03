@@ -79,6 +79,8 @@ def contact(request):
     return render(request,"hello/contact.html")
 def placed(request):
     return render(request,"hello/placed.html")
+def stat(request):
+    return render(request,"hello/stat.html")
 def recruiter(request):
     if request.method=="POST":
         username=request.POST.get('username')

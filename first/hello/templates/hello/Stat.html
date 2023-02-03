@@ -1,0 +1,193 @@
+{% extends "hello/base.html" %}
+
+{% load static %}
+<title>{% block title%}Stat{% endblock %}</title>
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart JS Bar Chart </title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js">
+    </script>
+</head>
+<body>
+    <div class="c">
+    <div class='b' id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    <div class='a'>
+        <h3><font face="arial black">PLACEMENT CHART IARE</font></h3>
+        <div>
+            <canvas id="barChartID"></canvas>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // pie chart
+        window.onload = function() {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "PLACEMENTS-IARE - 2016"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "##0.00\"%\"",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [
+                        {y: 79.45, label: "Google"},
+                        {y: 7.31, label: "Bing"},
+                        {y: 7.06, label: "Baidu"},
+                        {y: 4.91, label: "Yahoo"},
+                        {y: 1.26, label: "Others"}
+                    ]
+                }]
+            });
+            chart.render();
+            
+            }
+        // Bar chart
+        new Chart($("#barChartID"), {
+            type: 'bar',
+            options: {
+                legend: { display: true },
+                indexAxis: 'x',
+                title: {
+                    display: true,
+                    text: 'Bar Chart using ChartJS library'
+                }
+            },
+            data: {
+                labels: ["C++", "Java", "Blockchain", "PHP", "Python","HTML"],
+                datasets: [
+                    {
+                        label: "Technology Learned by Students",
+                        backgroundColor: ["#FFC0CB", "#0000FF",
+                            "#00FFFF", "#FFA500", "#FF7F50","#FF0000"],
+                        data: [234, 356, 819, 732, 213, 542]
+                    }
+                ]
+            }            
+        });
+        
+    </script>
+    <div class="kl"><h1>PLACEMENT BROCHURES</div>
+    <div class="r">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <br><br><br><br><br>
+            <button type="button" class="btn btn-success">DOWNLOAD</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <br><br><br><br><br>
+            <button type="button" class="btn btn-success">DOWNLOAD</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <br><br><br><br><br>
+            <button type="button" class="btn btn-success">DOWNLOAD</button>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://play-lh.googleusercontent.com/9XKD5S7rwQ6FiPXSyp9SzLXfIue88ntf9sJ9K250IuHTL7pmn2-ZB0sngAX4A2Bw4w" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <br><br><br><br><br>
+            <button type="button" class="btn btn-success">DOWNLOAD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<style>
+    .kl{
+        text-align:center;
+    }
+    .r{
+        display:flex;
+        margin-top:10px;
+    }
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin:40px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    .a{
+        width:700px;
+        height:500px;
+        margin:40px;
+    }
+    .b{
+        width:700px;
+        height:800px;
+        margin:40px;
+    }
+    .c{
+        display:flex;
+    }
+</style>
+</html>
+{% endblock %}

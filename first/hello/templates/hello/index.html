@@ -138,17 +138,17 @@
 <div class="row">
   <div class="column" style="background-color:#F8EEEC;">
     <p class="one">ANNOUNCEMENTS</p>
-    <marquee width="100%" direction="up" height="220px">
+    <marquee width="100%" direction="up" height="220px" scrolldelay="200">
       <p><font face="Times New Roman"><font color="blue" ><a href="https://www.tcs.com/careers">TCS</a></font>is hiring APPLY NOW...</font></p>
       <p><font face="Times New Roman"><font color="blue">EPAM </font> is hiring APPLY NOW</font></p>
-      <font face="Times New Roman" color="red">UPCOMING COMPANIES</font></p>
-      <font face="Times New Roman"><font color="blue">AMAZON </font>applicaton dates to be announced soon</font></p>
-      <font face="Times New Roman"><font color="blue">COGNIZANT</font> applicaton dates to be announced soon</font></p>
+      <p><font face="Times New Roman" color="red">UPCOMING COMPANIES</font></p>
+      <p><font face="Times New Roman"><font color="blue">AMAZON </font>applicaton dates to be announced soon</font></p>
+      <p><font face="Times New Roman"><font color="blue">COGNIZANT</font> applicaton dates to be announced soon</font></p>
       </marquee>
   </div>
   <div class="column" style="background-color:#FDF6E4;">
     <p class="one">INTERNSHIPS</p>
-    <marquee width="100%" direction="up" height="220px">
+    <marquee width="100%" direction="up" height="220px" scrolldelay="200">
     <font face="Times New Roman" color="blue">WEB DEVELOPMENT INTERNSHIPS</font></p>
     <font face="Times New Roman" color="blue">APP DEVELOPMENT INTERNSHIPS </font></p>
     <font face="Times New Roman" color="blue">CLOUD COMPUTING INTERNSHIPS</font></p>
@@ -158,7 +158,7 @@
   </div>
   <div class="column" style="background-color:#F8EEEC;">
     <p class="one">WORKSHOPS</p>
-    <marquee width="100%" direction="up" height="220px">
+    <marquee width="100%" direction="up" height="220px" scrolldelay="200">
     <font face="Times New Roman">WORKSHOP ON MACHINE LEARNING DATE:-<font color="blue">22/10/2020</font></font></p>
     <font face="Times New Roman">WORSHOP ON AI DATE:-<font color="blue">23/11/2020 </font></font></p>
     <font face="Times New Roman">WORKSHOP ON CYBERSECRUITY DATE:-<font color="blue">25/9/2021</font></font></p>
@@ -211,9 +211,6 @@
   background-color:orange;
   border-style:ridge;
   border-width:1px;
-}
-.column:hover{
-  transform:scale(1.1);
 }
 .div1:hover{
   transform:scale(1.2);
@@ -273,6 +270,14 @@
 .0{
   text-align:center;
 }
+.container1{
+  background-color:orange;
+  margin:30px;
+  border-radius:60px;
+}
+p{
+text-align: center;
+}
 </style>
 <hr>
 <div class="copyright">
@@ -282,10 +287,6 @@
         <div class="row">
 
             <div class="col">
-<div class="0">
-<p>This website is managed and maintained by .............
-Copyright © .............. | All Rights Reserved.</p>
-</div>
 </div>
 
 </div>
@@ -293,6 +294,76 @@ Copyright © .............. | All Rights Reserved.</p>
 </div>
 
 </div>
+<div>
+<body <div onload="load()">
+
+    <p>
+    <div class="container1">
+       <div class="row">
+          <div class="col-sm">
+             <p id='0101' class="fs-2 text-dark">0</p>
+             <p class="text-light">COMPANY VISITS</p>
+          </div>
+          <div class="col-sm">
+            <p id='0102' class="fs-2 text-dark">0</p>
+            <p class="text-light">HIGHEST PACKAGE IN LAKH</p>
+         </div>
+         <div class="col-sm">
+          <p id='0103' class="fs-2 text-dark">0</p>
+          <p class="text-light">AVERAGE PACKAGE IN LAKH</p>
+       </div>
+          <div class="col-sm">
+             <p id='0104' class="fs-2 text-dark">0</p>
+             <p class="text-light">TOTAL PLACEMENTS</p>
+       </div>
+    </div>
+ </div>
+ </p>
+ <script>
+    function animate(obj, initVal, lastVal, duration) {
+       let startTime = null;
+
+    //get the current timestamp and assign it to the currentTime variable
+    let currentTime = Date.now();
+
+    //pass the current timestamp to the step function
+    const step = (currentTime ) => {
+
+    //if the start time is null, assign the current time to startTime
+    if (!startTime) {
+       startTime = currentTime ;
+    }
+
+    //calculate the value to be used in calculating the number to be displayed
+    const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+    //calculate what to be displayed using the value gotten above
+    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+    //checking to make sure the counter does not exceed the last value (lastVal)
+    if (progress < 1) {
+       window.requestAnimationFrame(step);
+    } else {
+          window.cancelAnimationFrame(window.requestAnimationFrame(step));
+       }
+    };
+    //start animating
+       window.requestAnimationFrame(step);
+    }
+    let text1 = document.getElementById('0101');
+    let text2 = document.getElementById('0102');
+    let text3 = document.getElementById('0103');
+    let text4 = document.getElementById('0104');
+    const load = () => {
+       animate(text1, 0, 84, 7000);
+       animate(text2, 0, 50, 7000);
+       animate(text3, 100, 9, 7000);
+       animate(text4, 100, 1500, 7000);
+    }
+ </script>
+</body>
+</div>
+
 </body>
 
 </html>
