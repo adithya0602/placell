@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'hello.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
