@@ -9,23 +9,6 @@ User=get_user_model()
 from django.contrib.auth import authenticate, login
 def main(request):
     return render(request,"hello/main.html")
-def profilestud(request):
-    if request.method=="POST":
-        pname=request.POST.get('pname')
-        mobile=request.POST.get('mobile')
-        add=request.POST.get('add')
-        email=request.POST.get('email')
-        edu=request.POST.get('edu')
-        det=request.POST.get('det')
-        image=request.POST.get('image')
-        myuser=Profile(pname=pname,mobile=mobile,add=add,email=email,edu=edu,image=image,det=det)
-        myuser.save()
-        en=User.objects.create_user(username=pname,email=email)
-        en.first_name=pname
-        en.save()
-        messages.success(request,"successfully registered....")
-        return redirect('profilestud')
-    return render(request,"hello/profilestud.html")
 def contactus(request):
     return render(request,"hello/contactus.html")
 def main1(request):
