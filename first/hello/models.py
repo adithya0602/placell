@@ -33,6 +33,6 @@ class Profile(models.Model):
     email=models.EmailField(max_length=30)
     edu=models.CharField(max_length=50)
     det=models.CharField(max_length=50)
-    image=models.ImageField(upload_to="pics",default="default.svg")
+    image=models.ImageField(upload_to="pics",default="")
     def __str__(self):
         return self.pname
