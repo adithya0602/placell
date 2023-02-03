@@ -1,5 +1,5 @@
 from django.contrib import admin
-from hello.models import User,Recruiter,Student,Profile
+from hello.models import User,Recruiter,Student
 
 admin.site.register(User)
 
@@ -17,9 +17,4 @@ class StudentFilter(admin.ModelAdmin):
     list_filter=['sname','email']
 admin.site.register(Student,StudentFilter)
 
-class ProfileFilter(admin.ModelAdmin):
-    list_display=['pname','mobile','add','email','image']
-    list_display_links=['add']
-    list_editable=['pname','mobile','email','image']
-    list_filter=['pname','email']
-admin.site.register(Profile,ProfileFilter)
+

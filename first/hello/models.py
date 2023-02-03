@@ -26,13 +26,3 @@ class Student(models.Model):
     pass1=models.CharField(max_length=20)
     def __str__(self):
         return self.sname
-class Profile(models.Model):
-    pname=models.CharField(max_length=30)
-    mobile=models.CharField(max_length=10)
-    add=models.CharField(max_length=30)
-    email=models.EmailField(max_length=30)
-    edu=models.CharField(max_length=50)
-    det=models.CharField(max_length=50)
-    image=models.ImageField(upload_to="pics",default="default.svg")
-    def __str__(self):
-        return self.pname

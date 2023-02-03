@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.db import models
 from django.shortcuts import render,redirect
-from hello.models import Recruiter, Student,Profile
+from hello.models import Recruiter, Student
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
 User=get_user_model()
