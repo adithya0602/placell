@@ -9,6 +9,8 @@ User=get_user_model()
 from django.contrib.auth import authenticate, login
 def main(request):
     return render(request,"hello/main.html")
+def companyc(request):
+    return render(request,"hello/companyc.html")
 def contactus(request):
     return render(request,"hello/contactus.html")
 def main1(request):
