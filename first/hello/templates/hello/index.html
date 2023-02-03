@@ -13,13 +13,22 @@
     <title> {% block title %}home{% endblock title %}</title>
 </head>
 {% block body %}
-<div>
-  <span><img src="https://i.pinimg.com/originals/96/19/99/96199963430a92bf5c15349943ec90aa.gif" height="500px" /></span>
+<body>
+<div class="t">
+  <span><img class="gf" src="https://i.pinimg.com/originals/96/19/99/96199963430a92bf5c15349943ec90aa.gif" height="500px" /></span>
   <span><font face="arial black" size="10px" >WELCOME TO PLACEMENT PORTAL</font><br><font face="arial black" size="30px" color="green">IARE</font></span>
 </div>
 <style>
 div {
   display: table;
+}
+.t{
+  background-color:#C8FFFF;
+  margin:20px;
+  border-radius:40px;
+}
+.gf{
+  border-radius: 180px 20px;
 }
 
 img {
@@ -40,12 +49,16 @@ span {
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 350px;
+  max-width: 250px;
   margin: auto;
   text-align: center;
   font-family: arial;
-  height:350px;
-  border-color:green;
+  height:300px;
+  border-style: solid;
+  border-width:7px;
+  border-color: grey;
+  border-radius: 15px;
+
 }
 
 .price {
@@ -72,25 +85,121 @@ span {
     display:flex;
     margin:60px;
 }
-
+.h{
+  padding-left:60px;
+}
+.hh{
+  text-align:center;
+}
+.input-group-text{
+  background-color:#47D3CE;
+}
+.ad{
+  font-family:boulder;
+  font-size:30px;
+}
+.tr{
+  margin-left:610px;
+  background-color:skyblue;
+  padding:10px;
+  margin-top:40px;
+  margin-bottom:40px;
+  font-family:arial black;
+  border-radius:10px;
+}
 </style>
 <h2 class="pb"><strong><font face="Bebas Neue">PLACEMENT CELL ACCESS</font></h2>
   <div class="a">
     <div class="card">
-        <img src="https://thumbs.dreamstime.com/b/executive-businessman-smilig-profile-cartoon-vector-illustration-graphic-design-154894544.jpg" height="200px" alt="Denim Jeans" style="width:100%">
-        <h1>STUDENT ACCESS</h1>
-        <p><a class="nav-link" href="/student_login"><button type="submit" class="btn btn-info"><strong><font face="Arial" color="white">LOGIN</font></button></strong></a></p>
-      </div>
+      <img src="https://images.cdn4.stockunlimited.net/preview1300/office-employee_1562002.jpg" height="200px" alt="Denim Jeans" style="width:100%">
+      <h1 class="ad">STUDENT</h1>
+      <p><a class="nav-link" href="/student_login"><button type="submit" class="btn btn-info"><strong><font face="Arial" color="white">LOGIN</font></button></strong></a></p>
+    </div>
       <div class="card">
-        <img src="https://img.freepik.com/premium-vector/vector-small-business-city-building-illustration-with-flat-design-style_738021-20.jpg?w=2000" height="200px" alt="Denim Jeans" style="width:100%">
-        <h1>COMPANY ACCESS</h1>
+        <img src="https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-company_516790-299.jpg?w=360" height="200px" alt="Denim Jeans" style="width:100%">
+        <h1 class="ad">COMPANIES</h1>
         <p><a class="nav-link" href="/companyc"><button type="submit" class="btn btn-info"><strong><font face="Arial" color="white">VISIT</font></button></strong></a></p>
       </div>
       <div class="card">
         <img src="https://us.123rf.com/450wm/metelsky/metelsky1903/metelsky190300010/metelsky190300010.jpg?ver=6" height="200px" alt="Denim Jeans" style="width:100%">
-        <h1>RECRUITER ACCESS</h1>
+        <h1 class="ad">RECRUITER</h1>
         <p><a class="nav-link" href="/recruiter_login"><button type="submit" class="btn btn-info"><strong><font face="Arial" color="white">LOGIN</font></button></strong></a></p>
       </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1 class="hh"><font face="arial black" color="green">OBJECTIVES</font></h1>
+  <br>
+  <div class="h">
+    <span><img src="https://freeagent-res.cloudinary.com/image/upload/c_limit,w_1000/dpr_auto,f_auto/website-images/netlify/guides__how-to-set-business-goals.png" height="300px"/></span>
+    <span><font face="arial" size="4px" color="black">
+      Recruitment objectives are goals set by businesses or recruiters to 
+      ensure they select the right candidates for available positions. The
+      primary recruitment objective of any company is to hire the most 
+      qualified candidates, but most have other goals to meet in their 
+      hiring processes, as well. In recent years, recruitment has shifted
+      to consider candidates' needs and preferences more heavily, and objectives
+      have changed to reflect this.When searching for the ideal candidate for a 
+      position, recruiters first look for applicants whose resumes match the job
+      description they listed.
+    </font><br>
+  </div>
+  <br>
+  <br>
+  <h1 class="hh"><font face="arial black" color="green">ABOUT US</font></h1>
+  <br>
+  <br>
+  <div class="h">
+    <span><font face="arial" size="4px" color="black">
+      Institute of Aeronautical Engineering (IARE), Hyderabad was established 
+      in the year 2000 and is run by Maruthi Educational Society founded by a 
+      devoted group of eminent professional and industrialists having a long 
+      and outstanding experience in educational system with a mission 'Education
+      for Liberation'. It is the first institute to start B.Tech program in Aeronautical 
+      Engineering in the state of Telangana and has gradually transformed itself into an 
+      integrated multi-disciplinary technological institute. It is the most preferred institute.</span>
+    <span><img src="https://gifographics.co/wp-content/uploads/2016/10/about-us.gif" height="300px"/>
+    <br>
+  </div>
+  <br>
+  <br>
+  <h1 class="hh"><font face="arial black" color="green">CONTACT US</font></h1>
+  <br>
+  <div class="h">
+    <span><img src="https://dtlive.s3.ap-south-1.amazonaws.com/16986/Contact-us-Animated-GIF-Icon-Pack-by-Discover-Template.gif" height="300px"/></span>
+    <span><font face="arial" size="4px" color="black">
+      <h3><font face="arial black" color="black" size="5px">FOR QUERIES</font></h3><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">EMAIL</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">PHONE NO</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">MESSAGE</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+      <br>
+      <button type="button" class="btn btn-success">SUBMIT</button>
+    </font><br>
+  </div>
+</div>
+<div class="tr">
+  <h2><font color="black" size="4px">Designed by---</font><font color="green" size="4px">@Adithya Rao</font></h2>
+</div>
 </body>
 
 </html>
