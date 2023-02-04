@@ -21,19 +21,6 @@ def about(request):
     return render(request,"hello/about.html")
 def companies_visited(request):
     return render(request,"hello/company.html")
-def student_login(request):
-    if request.method=="POST":
-        sname=request.POST.get('sname')
-        pass1=request.POST.get('pass1')
-        user=authenticate(username=sname,password=pass1)
-        if user is not None and user.is_student:
-            login(request,user)
-            messages.success(request,"successfully logged in")
-            return render(request,"hello/main.html")
-        else:
-            messages.error(request,"invalid credentials")
-            return redirect("student_login")
-    return render(request,"hello/student_login.html")
 def recruiter_login(request):
     if request.method=="POST":
         username=request.POST.get('username')
@@ -41,7 +28,6 @@ def recruiter_login(request):
         user=authenticate(username=username,password=password)
         if user is not None and user.is_recruiter:
             login(request,user)
-            messages.info(request,"successfully logged in")
             return render(request,"hello/main1.html")
         else:
             messages.error(request,"invalid credentials")
@@ -54,7 +40,6 @@ def student_login(request):
         user=authenticate(username=username,password=password)
         if user is not None and user.is_student:
             login(request,user)
-            messages.info(request,"successfully logged in")
             return render(request,"hello/main.html")
         else:
             messages.error(request,"invalid credentials")
